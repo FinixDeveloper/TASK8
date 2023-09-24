@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel ="stylesheet" href = "bootstrap.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <style>
+        .body{
+    background-color: gray;
+    float:left;
+    width:700px;
+    margin: 100;
+    border: coral;
+    align-content: center;
+    display: flex;
+}
+.required-asterisk{
+    content:"*";color:red;
+  }
+  div.stars {
+    width: 250px;
+    display: inline-block;
+  }
+  input.star { display: none; }
+  label.star {
+    float: left;
+    padding: 1px;
+    font-size: 25px;
+    color: #444;
+    transition: all .2s;
+  }
+  input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+  }
+  input.star-5:checked ~ label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+  }
+  input.star-1:checked ~ label.star:before { color: #F62; }
+  label.star:hover { transform: rotate(-15deg) scale(1.3); }
+  label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+  }
+table {
+    border-collapse: collapse;
+}
+th {
+    
+    padding: 8px;
+    text-align: left;
+}
+td {
+    
+    padding: 8px;
+    text-align: left;
+}
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+    <div class = "first">
+        <div>
+            <form>
+                <div>
+                <b>
+                <label for="Name">Name <span class="required-asterisk">*</span></label>
+                 </b>
+                </div>
+                <br/>
+                <label for="First Name">First Name</label>
+                <input type="text" class="form-control" placeholder="First Name" required="required">
+                <label for="Last Name">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last Name" required="required">
+                <br/>
+                <br/>
+                <div>
+                <b>
+                <label for="Name">Email <span class="required-asterisk">*</span></label>
+                </b>
+                <input type ="email" class="form-control" placeholder="Email" required="required">
+                </div>
+                <br/>
+                <div class="stars">
+                    <form action="">
+                        <b><label for="star">Your Experience<span class="required-asterisk">*</span></label></b><br/>
+                      <input class="star star-5" id="star-5" type="radio" name="star"/>
+                      <label class="star star-5" for="star-5"></label>
+                      <input class="star star-4" id="star-4" type="radio" name="star"/>
+                      <label class="star star-4" for="star-4"></label>
+                      <input class="star star-3" id="star-3" type="radio" name="star"/>
+                      <label class="star star-3" for="star-3"></label>
+                      <input class="star star-2" id="star-2" type="radio" name="star"/>
+                      <label class="star star-2" for="star-2"></label>
+                      <input class="star star-1" id="star-1" type="radio" name="star"/>
+                      <label class="star star-1" for="star-1"></label>
+                    </form>
+                  </div>
+                <p>Overall, how would you rate you Experience with us?</p>
+                <b><p>How satisfied are you with us<span class="required-asterisk">*</span></p></b>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Very Unsatisfied</th>
+                        <th>Unsatisfied</th>
+                        <th>Neutral</th>
+                        <th>Satisfied</th>
+                        <th>Very Satisfied</th>
+                    </tr>
+                    <tr>
+                        <td>Purchase</td>
+                        <td><input type="radio" name="Purchase" value="Very Unsatisfied"></td>
+                        <td><input type="radio" name="Purchase" value="Unsatisfied"></td>
+                        <td><input type="radio" name="Purchase" value="Neutral"></td>
+                        <td><input type="radio" name="Purchase" value="Satisfied"></td>
+                        <td><input type="radio" name="Purchase" value="Very Satisfied"></td>
+                    </tr>
+                    <tr>
+                        <td>Servicee</td>
+                        <td><input type="radio" name="Service" value="Very Unsatisfied"></td>
+                        <td><input type="radio" name="Service" value="Unsatisfied"></td>
+                        <td><input type="radio" name="Service" value="Neutral"></td>
+                        <td><input type="radio" name="Service" value="Satisfied"></td>
+                        <td><input type="radio" name="Service" value="Very Satisfied"></td>
+                    </tr>
+                    <tr>
+                        <td>company Overall</td>
+                        <td><input type="radio" name="company Overall" value="Very Unsatisfied"></td>
+                        <td><input type="radio" name="company Overall" value="Unsatisfied"></td>
+                        <td><input type="radio" name="company Overall" value="Neutral"></td>
+                        <td><input type="radio" name="company Overall" value="Satisfied"></td>
+                        <td><input type="radio" name="company Overall" value="Very Satisfied"></td>
+                    </tr>
+                </table>
+                <b><p>How Likely are you to<span class="required-asterisk">*</span></p></b>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Very Unlikely</th>
+                        <th>Unlikely</th>
+                        <th>Neutral</th>
+                        <th>likely</th>
+                        <th>Very likely</th>
+                    </tr>
+                    <tr>
+                        <td>Buy from us again</td>
+                        <td><input type="radio" name="Buy from us again" value="Very Unlikely"></td>
+                        <td><input type="radio" name="Buy from us again" value="Unlikely"></td>
+                        <td><input type="radio" name="Buy from us again" value="Neutral"></td>
+                        <td><input type="radio" name="Buy from us again" value="likely"></td>
+                        <td><input type="radio" name="Buy from us again" value="Very likely"></td>
+                    </tr>
+                    <tr>
+                        <td>Recommend our <br/>product to others</td>
+                        <td><input type="radio" name="Recommend our product to others" value="Very Unlikely"></td>
+                        <td><input type="radio" name="Recommend our product to others" value="Unlikely"></td>
+                        <td><input type="radio" name="Recommend our product to others" value="Neutral"></td>
+                        <td><input type="radio" name="Recommend our product to others" value="likely"></td>
+                        <td><input type="radio" name="Recommend our product to others" value="Very likely"></td>
+                    </tr>
+                    <tr>
+                        <td>Recommend our <br/>company to others</td>
+                        <td><input type="radio" name="Recommend our company to others" value="Very Unlikely"></td>
+                        <td><input type="radio" name="Recommend our company to others" value="Unlikely"></td>
+                        <td><input type="radio" name="Recommend our company to others" value="Neutral"></td>
+                        <td><input type="radio" name="Recommend our company to others" value="likely"></td>
+                        <td><input type="radio" name="Recommend our company to others" value="Very likely"></td>
+                    </tr>
+                </table>
+                <b><p>Additional comments or suggestions</p></b>
+                    <div>
+                        <textarea rows="6"    cols="70" name="blog">      
+                          </textarea>
+                    </div>
+                <br/>
+                <div><input type="submit" value="Submit"></div>
+                    
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
